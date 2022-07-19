@@ -29,7 +29,7 @@ Before diving into this sample, please complete the following tasks:
 git clone https://github.com/BugSplat-Git/my-unreal-crasher --recurse-submodules
 ```
 
-2. Double click the `MyUnrealCrasher.uproject` file to open the project in the Unreal Editor.
+2. Double click the `MyUnrealCrasher.uproject` file to open the project in the Unreal Editor. Depending on the Unreal Engine version you have installed you may need to open the project and close it a few times until it prompts you to rebuild both MyUnrealCrasher and BugSplat.
 3. Once the project has been opened, click `Edit > BugSplat` to load the BugSplat-Unreal plugin dialog.
 4. Fill in the values for `Database`, `Application`, `Version`, `Client ID`, and `Client Secret`
 5. Click `Add Symbol Uploads`
