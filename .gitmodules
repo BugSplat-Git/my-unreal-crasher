@@ -1,0 +1,3 @@
+[submodule "Plugins/BugSplat"]
+	path = Plugins/BugSplat
+	url = https://github.com/BugSplat-Git/bugsplat-unreal
