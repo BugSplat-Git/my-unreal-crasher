@@ -26,8 +26,7 @@ AFloatingActor::AFloatingActor()
 // Called when the game starts or when spawned
 void AFloatingActor::BeginPlay()
 {
-	Super::BeginPlay();
-	
+	Super::BeginPlay();	
 }
 
 // Called every frame
@@ -43,17 +42,5 @@ void AFloatingActor::Tick(float DeltaTime)
 	float DeltaRotation = DeltaTime * 20.0f;    //Rotate by 20 degrees per second
 	NewRotation.Yaw += DeltaRotation;
 	SetActorLocationAndRotation(NewLocation, NewRotation);
-
-	if (counter % 10 == 0)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Counter %d"), counter);
-	}
-
-	if (counter >= 300)
-	{
-		UE_LOG(LogTemp, Fatal, TEXT("BugSplat!"));
-	}
-
-	counter++;
 }
 
