@@ -48,6 +48,11 @@ void FMyUnrealPluginModule::ShutdownModule()
 	ExampleLibraryHandle = nullptr;
 }
 
+void FMyUnrealPluginModule::PluginCrash()
+{
+	ExampleLibraryCrash();
+}
+
 #undef LOCTEXT_NAMESPACE
 	
 IMPLEMENT_MODULE(FMyUnrealPluginModule, MyUnrealPlugin)

@@ -7,3 +7,4 @@
 #endif
 
 EXAMPLELIBRARY_IMPORT void ExampleLibraryFunction();
+EXAMPLELIBRARY_IMPORT void ExampleLibraryCrash();

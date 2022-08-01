@@ -14,6 +14,8 @@ public:
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 
+	static void MYUNREALPLUGIN_API PluginCrash();
+
 private:
 	/** Handle to the test dll we will load */
 	void*	ExampleLibraryHandle;

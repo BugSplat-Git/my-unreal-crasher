@@ -13,10 +13,13 @@
 EXAMPLELIBRARY_EXPORT void ExampleLibraryFunction()
 {
 #if defined _WIN32 || defined _WIN64
-	MessageBox(NULL, TEXT("About to crash!"), TEXT("Crash Incoming!"), MB_OK);
+	MessageBox(NULL, TEXT("Loaded ExampleLibrary.dll from Third Party Plugin sample."), TEXT("Third Party Plugin"), MB_OK);
 #else
-    printf("About to crash!");
+    printf("Loaded ExampleLibrary from Third Party Plugin sample");
 #endif
+}
 
+EXAMPLELIBRARY_EXPORT void ExampleLibraryCrash()
+{
     *(volatile int *)0 = 0;
 }

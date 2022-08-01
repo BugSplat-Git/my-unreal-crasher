@@ -2,6 +2,7 @@
 
 
 #include "FloatingActor.h"
+#include "MyUnrealPlugin.h"
 
 int counter = 0;
 
@@ -42,5 +43,21 @@ void AFloatingActor::Tick(float DeltaTime)
 	float DeltaRotation = DeltaTime * 20.0f;    //Rotate by 20 degrees per second
 	NewRotation.Yaw += DeltaRotation;
 	SetActorLocationAndRotation(NewLocation, NewRotation);
+
+	if (counter % 10 == 0)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Counter %d"), counter);
+	}
+
+	if (counter >= 300)
+	{
+		UE_LOG(LogTemp, Fatal, TEXT("BugSplat!"));
+		
+		// TODO BG support plugin crash on all platforms
+		// TODO BG allow crash type selection via buttons
+		//FMyUnrealPluginModule::PluginCrash();
+	}
+
+	counter++;
 }
 
