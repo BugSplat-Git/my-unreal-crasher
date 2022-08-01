@@ -2,6 +2,7 @@
 
 
 #include "FloatingActor.h"
+#include "MyUnrealPlugin.h"
 
 int counter = 0;
 
@@ -26,8 +27,7 @@ AFloatingActor::AFloatingActor()
 // Called when the game starts or when spawned
 void AFloatingActor::BeginPlay()
 {
-	Super::BeginPlay();
-	
+	Super::BeginPlay();	
 }
 
 // Called every frame
@@ -50,7 +50,11 @@ void AFloatingActor::Tick(float DeltaTime)
 	}
 
 	if (counter >= 300)
-	{
+	{	
+		// TODO BG support plugin crash on all platforms
+		// TODO BG allow crash type selection via buttons
+		//FMyUnrealPluginModule::PluginCrash();
+
 		UE_LOG(LogTemp, Fatal, TEXT("BugSplat!"));
 	}
 
