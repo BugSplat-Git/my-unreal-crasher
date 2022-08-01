@@ -50,12 +50,12 @@ void AFloatingActor::Tick(float DeltaTime)
 	}
 
 	if (counter >= 300)
-	{
-		UE_LOG(LogTemp, Fatal, TEXT("BugSplat!"));
-		
+	{	
 		// TODO BG support plugin crash on all platforms
 		// TODO BG allow crash type selection via buttons
 		//FMyUnrealPluginModule::PluginCrash();
+
+		UE_LOG(LogTemp, Fatal, TEXT("BugSplat!"));
 	}
 
 	counter++;
