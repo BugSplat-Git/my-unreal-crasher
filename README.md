@@ -23,6 +23,8 @@ Before diving into this sample, please complete the following tasks:
 
 ## 🥾 Steps
 
+The following guide assumes your project is targeting Windows, but these steps are applicable to other Desktop platforms as well. On Mobile platforms the BugSplat plugin will automatically configure crash reporting and symbol uploads.
+
 1. Before you clone this repo make sure you have [git-lfs](https://git-lfs.github.com/) installed.
 2. Clone this repo and the associated submodules. It's important that this repo is cloned with the `--recurse-submodules` flag so that the BugSplat-Unreal plugin is also downloaded:
 
@@ -31,14 +33,14 @@ git clone https://github.com/BugSplat-Git/my-unreal-crasher --recurse-submodules
 ```
 
 3. Double click the `MyUnrealCrasher.uproject` file to open the project in the Unreal Editor. Depending on the Unreal Engine version you have installed you may need to open the project and close it a few times until it prompts you to rebuild both MyUnrealCrasher and BugSplat.
-4. Once the project has been opened, click `Edit > BugSplat` to load the BugSplat-Unreal plugin dialog.
-5. Fill in the values for `Database`, `Application`, `Version`, `Client ID`, and `Client Secret`
+4. Once the project has been opened, click `Edit > Project Settings` and scroll to the `BugSplat` section under `Plugins`.
+5. Fill in the values for `Database`, `Application`, `Version`, `User`, and `Password`
 6. Click `Add Symbol Uploads`
-7. Close the plugin dialog and package your project
-8. Open the plugin dialog once more and click `Update Game Ini`
-9. Select the directory that contains the `Windows` folder
-10. Run `MyUnrealCrasher.exe` to generate a crash report
-11. Navigate to the [Crashes](https://app.bugsplat.com/v2/crashes) page and click the link in the ID column to view the details of your crash
+7. Package your project
+8. In the `BugSplat` section of `Project Settings` click `Update Game INI`
+9. Select the directory that contains the `Windows` or `WindowsNoEditor` folder
+
+Run your packaged game to generate a crash report. Navigate to the [Crashes](https://app.bugsplat.com/v2/crashes) page and click the link in the ID column to view the details of your crash
 
 If you did everything correctly your result should look something like this
 
