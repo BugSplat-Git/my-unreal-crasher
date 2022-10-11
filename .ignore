@@ -1,0 +1,11 @@
+.vscode
+Intermediate
+Saved
+DerivedDataCache
+.git
+Content
+Plugins/BugSplat/Intermediate
+Plugins/BugSplat/.assets
+Plugins/BugSplat/Content
+Plugins/MyUnrealPlugin/Intermediate
+Plugins/MyUnrealPlugin/Content
