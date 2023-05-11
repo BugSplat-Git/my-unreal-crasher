@@ -19,26 +19,34 @@ Before diving into this sample, please complete the following tasks:
 
 * [Sign Up](https://app.bugsplat.com/v2/sign-up) as a new BugSplat user
 * Complete the [Welcome](https://app.bugsplat.com/v2/welcome) workflow and make a note of your BugSplat database
-* Generate a Client ID and Client Secret for symbol uploads on the [Integrations](https://app.bugsplat.com/v2/settings/database/integrations) page
+* Generate a Client ID and Client Secret for symbol uploads on the [Integrations](https://app.bugsplat.com/v2/settings/database/integrations?database=Fred#oauth) page
 
 ## 🥾 Steps
 
 The following guide assumes your project is targeting Windows, but these steps are applicable to other Desktop platforms as well. On Mobile platforms the BugSplat plugin will automatically configure crash reporting and symbol uploads.
 
 1. Before you clone this repo make sure you have [git-lfs](https://git-lfs.github.com/) installed.
-2. Clone this repo and the associated submodules. It's important that this repo is cloned with the `--recurse-submodules` flag so that the BugSplat-Unreal plugin is also downloaded:
+2. Clone this repo and the associated submodules. It's important that this repo is cloned with the `--recurse-submodules` flag so that the [bugsplat-unreal](https://github.com/BugSplat-Git/bugsplat-unreal) plugin is also downloaded:
 
 ```sh
 git clone https://github.com/BugSplat-Git/my-unreal-crasher --recurse-submodules
 ```
 
-3. Double click the `MyUnrealCrasher.uproject` file to open the project in the Unreal Editor. Depending on the Unreal Engine version you have installed you may need to open the project and close it a few times until it prompts you to rebuild both MyUnrealCrasher and BugSplat.
+3. Double click the `MyUnrealCrasher.uproject` file to open the project in the Unreal Editor. Depending on the Unreal Engine version you have installed you may need to [Generate Visual Studio project files](https://forums.unrealengine.com/t/how-to-rebuild-my-project-for-include-a-plugin/324613) and build the plug-in from source.
 4. Once the project has been opened, click `Edit > Project Settings` and scroll to the `BugSplat` section under `Plugins`.
-5. Fill in the values for `Database`, `Application`, `Version`, `User`, and `Password`
-6. Click `Add Symbol Uploads`
-7. Package your project
-8. In the `BugSplat` section of `Project Settings` click `Update Game INI`
-9. Select the directory that contains the `Windows` or `WindowsNoEditor` folder
+5. Fill in the values for `Database`, `Application`, `Version`, `Client ID`, and `Client Secret`
+
+### Windows
+
+1. Click `Add Symbol Uploads`
+2. Package your project to upload symbols to BugSplat
+3. In the `BugSplat` section of `Project Settings` click `Update Game INI`
+4. Select the directory that contains the `Windows` or `WindowsNoEditor` folder
+
+### iOS & Android
+
+1. Ensure that `Enable automatic symbol uploads` and `Enable crash reporting` are both checked
+2. Package your project to upload symbols to BugSplat
 
 Run your packaged game to generate a crash report. Navigate to the [Crashes](https://app.bugsplat.com/v2/crashes) page and click the link in the ID column to view the details of your crash
 
