@@ -13,5 +13,8 @@ UCLASS()
 class MYUNREALCRASHER_API AMyUnrealCrasherGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	AMyUnrealCrasherGameModeBase();
 	
 };
