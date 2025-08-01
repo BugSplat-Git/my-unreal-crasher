@@ -23,16 +23,16 @@ Before diving into this sample, please complete the following tasks:
 
 ## 🥾 Steps
 
-The following guide assumes your project is targeting Windows, but these steps are applicable to other Desktop platforms as well. On Mobile platforms the BugSplat plugin will automatically configure crash reporting and symbol uploads.
+The following guide assumes your project is targeting Windows, but these steps apply to other Desktop platforms as well. On Mobile platforms, the BugSplat plugin will automatically configure crash reporting and symbol uploads.
 
-1. Before you clone this repo make sure you have [git-lfs](https://git-lfs.github.com/) installed.
-2. Clone this repo and the associated submodules. It's important that this repo is cloned with the `--recurse-submodules` flag so that the [bugsplat-unreal](https://github.com/BugSplat-Git/bugsplat-unreal) plugin is also downloaded:
+1. Before you clone this repo, make sure you have [git-lfs](https://git-lfs.github.com/) installed.
+2. Clone this repo and the associated submodules. This repo must be cloned with the `--recurse-submodules` flag so that the [bugsplat-unreal](https://github.com/BugSplat-Git/bugsplat-unreal) plugin is also downloaded:
 
 ```sh
 git clone https://github.com/BugSplat-Git/my-unreal-crasher --recurse-submodules
 ```
 
-3. Double click the `MyUnrealCrasher.uproject` file to open the project in the Unreal Editor. Depending on the Unreal Engine version you have installed you may need to [Generate Visual Studio project files](https://forums.unrealengine.com/t/how-to-rebuild-my-project-for-include-a-plugin/324613) and build the plug-in from source.
+3. Double-click the `MyUnrealCrasher.uproject` file to open the project in the Unreal Editor. Depending on the Unreal Engine version you have installed, you may need to [Generate Visual Studio project files](https://forums.unrealengine.com/t/how-to-rebuild-my-project-for-include-a-plugin/324613) and build the plug-in from source.
 4. Once the project has been opened, click `Edit > Project Settings` and scroll to the `BugSplat` section under `Plugins`.
 5. Fill in the values for `Database`, `Application`, `Version`, `Client ID`, and `Client Secret`
 
@@ -50,7 +50,8 @@ git clone https://github.com/BugSplat-Git/my-unreal-crasher --recurse-submodules
 
 Run your packaged game to generate a crash report. Navigate to the [Crashes](https://app.bugsplat.com/v2/crashes) page and click the link in the ID column to view the details of your crash
 
-If you did everything correctly your result should look something like this
+If you did everything correctly, your result should look something like this:
 
-<img width="1711" alt="image" src="https://user-images.githubusercontent.com/2646053/181916918-159e6c3a-d11a-4751-81e3-d22f90037d09.png">
+<img width="1728" height="998" alt="image" src="https://github.com/user-attachments/assets/0cc11520-84f9-494f-8822-14c970dbde55" />
+
 
