@@ -81,7 +81,7 @@ void FMyUnrealCrasherAndroidErrorOutputDevice::HandleError()
 void FMyUnrealCrasherAndroidErrorOutputDevice::RequestExit( bool Force, const TCHAR* CallSite)
 {
 
-#if PLATFORM_COMPILER_OPTIMIZATION_PG_PROFILING
+#if defined(PLATFORM_COMPILER_OPTIMIZATION_PG_PROFILING) && PLATFORM_COMPILER_OPTIMIZATION_PG_PROFILING
 	// Write the PGO profiling file on a clean shutdown.
 	extern void PGO_WriteFile();
 	if (!GIsCriticalError)
